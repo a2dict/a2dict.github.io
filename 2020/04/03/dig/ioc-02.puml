@@ -1,0 +1,12 @@
+@startuml 
+' skinparam monochrome true
+hide members
+title 依赖反转
+
+package MainPkg {
+interface IAComp
+Main -> IAComp
+}
+IAComp <|-- ACompImpl : 依赖
+Main ..> ACompImpl :控制
+@enduml
